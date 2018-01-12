@@ -1,13 +1,14 @@
 package com.yinhao.boxdrawingview;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 
-public class DragAndDrawActivity extends AppCompatActivity {
+public class DragAndDrawActivity extends SingleFragmentActivtiy {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drag_and_draw);
+    public Fragment createFragment() {
+        return DragFragment.newInstance();
     }
+
+
 }
